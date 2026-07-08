@@ -1,4 +1,6 @@
+
 # The Site Configuration
+theme_color: rose_quartz
 
 # Import the theme
 theme: jekyll-theme-chirpy

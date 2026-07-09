@@ -3,21 +3,38 @@
 
 @import 'main{% if jekyll.environment == "production" %}.bundle{% endif %}';
 
-/* ---- custom palette ---- */
-
 html {
   &[data-mode='light'], &:not([data-mode]) {
-    --link-color: #9e81b3;         /* muted purple links */
-    --btn-border-color: #64853a;   /* olive green button border */
-    --sidebar-bg: #d8bcf7;         /* light lavender sidebar */
+    --sidebar-bg: #d8bcf7;
+    --sidebar-border-color: #b18fe8;
+    --sidebar-text-color: #2b143d;
+
+    --nav-link-color: #9e81b3;
+    --nav-hover-color: #b83280;
     --nav-cursor-color: #9e81b3;
-    --tag-hover: #9eb556;          /* yellow-green tag hover */
+
+    --tag-bg: #f0e6ff;
+    --tag-text-color: #5b2a87;
+    --tag-hover: #9eb556;
+
+    --link-color: #9e81b3;
+    --btn-border-color: #b18fe8;
   }
 
   &[data-mode='dark'] {
-    --link-color: #d8bcf7;         /* light lavender links pop on dark */
-    --sidebar-bg: #64853a;         /* deep olive sidebar */
+    --sidebar-bg: #2b163d;
+    --sidebar-border-color: #40235e;
+    --sidebar-text-color: #eadcff;
+
+    --nav-link-color: #d8bcf7;
+    --nav-hover-color: #e0aaff;
     --nav-cursor-color: #d8bcf7;
-    --tag-hover: #8b8a4b;          /* dark olive-yellow tag hover */
+
+    --tag-bg: #3a2456;
+    --tag-text-color: #eadcff;
+    --tag-hover: #8b8a4b;
+
+    --link-color: #d8bcf7;
+    --btn-border-color: #40235e;
   }
 }

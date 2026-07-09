@@ -206,3 +206,7 @@
     --btn-paginator-hover-color: #2e2e2e;
   }
 }
+:root[data-bs-theme='dark'] {
+  --bs-body-bg: rgb(27 27 30);
+  --bs-body-color: rgb(175 176 177);
+}

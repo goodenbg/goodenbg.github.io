@@ -1,0 +1,23 @@
+---
+---
+
+@import 'main{% if jekyll.environment == "production" %}.bundle{% endif %}';
+
+/* ---- custom palette ---- */
+
+html {
+  &[data-mode='light'], &:not([data-mode]) {
+    --link-color: #9e81b3;         /* muted purple links */
+    --btn-border-color: #64853a;   /* olive green button border */
+    --sidebar-bg: #d8bcf7;         /* light lavender sidebar */
+    --nav-cursor-color: #9e81b3;
+    --tag-hover: #9eb556;          /* yellow-green tag hover */
+  }
+
+  &[data-mode='dark'] {
+    --link-color: #d8bcf7;         /* light lavender links pop on dark */
+    --sidebar-bg: #64853a;         /* deep olive sidebar */
+    --nav-cursor-color: #d8bcf7;
+    --tag-hover: #8b8a4b;          /* dark olive-yellow tag hover */
+  }
+}

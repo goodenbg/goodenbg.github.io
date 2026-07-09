@@ -5,22 +5,32 @@
 
 /* Put overrides at the very end of the file */
 
-html {
-  &[data-mode='light'], &:not([data-mode]) {
-    /* Framework/background vars (must exist in your inspector) */
+:root {
+  &[data-bs-theme='light'] {
     --main-bg: white;
     --mask-bg: #c1c3c5;
     --main-border-color: #f3f3f3;
 
-    /* Menu */
+    --text-color: #34343c;
+    --text-muted-color: #757575;
+    --heading-color: #2a2a2a;
+    --label-color: #585858;
+    --blockquote-border-color: #eeeeee;
+    --blockquote-text-color: #757575;
+
+    --link-color: #0056b2;
+    --link-underline-color: #dee2e6;
+
+    --button-bg: #ffffff;
+    --btn-border-color: #e9ecef;
+    --btn-backtotop-color: #686868;
+    --btn-backtotop-border-color: #f1f1f1;
+
     --menu-bg: white;
     --menu-border-color: white;
     --menu-shadow-color: rgb(0 0 0 / 16%);
-
-    /* Existing ones you already had */
-    --text-color: #34343c;
-    --link-color: #0056b2;
-    --btn-border-color: #e9ecef;
+    --menu-active-color: rgb(91 91 91);
+    --menu-highlight-bg: rgb(243 244 245 / 50%);
 
     --sidebar-bg: #f6f8fa;
     --sidebar-border-color: #efefef;
@@ -29,44 +39,95 @@ html {
     --sidebar-hover-bg: rgb(223 233 241 / 64%);
     --sidebar-btn-bg: white;
     --sidebar-btn-color: #8e8e8e;
+    --avatar-border-color: white;
 
     --topbar-bg: rgb(255 255 255 / 70%);
     --topbar-text-color: rgb(78 78 78);
-    --input-focus-border-color: #b8b8b8;
     --search-border-color: rgb(240 240 240);
+    --input-focus-border-color: #b8b8b8;
 
     --toc-highlight: #0550ae;
+    --toc-popup-border-color: lightgray;
+
     --card-bg: white;
     --card-hover-bg: #e2e2e2;
+    --card-shadow:
+      rgb(104 104 104 / 5%) 0 2px 6px 0,
+      rgb(211 209 209 / 15%) 0 0 0 1px;
 
     --tag-border: #dee2e6;
     --tag-shadow: var(--btn-border-color);
     --tag-hover: rgb(222 226 230);
     --search-tag-bg: #f8f9fa;
 
-    --button-bg: #ffffff;
-    --menu-active-color: rgb(91 91 91);
+    --categories-border: rgb(0 0 0 / 12.5%);
+    --categories-hover-bg: var(--btn-border-color);
+    --categories-icon-hover-color: darkslategray;
 
-    /* (Optional but commonly needed) */
-    --avatar-border-color: white;
-    --menu-highlight-bg: rgb(243 244 245 / 50%);
+    --timeline-color: rgb(0 0 0 / 7.5%);
+    --timeline-node-bg: #c2c6cc;
+    --timeline-year-dot-color: #ffffff;
+
+    --language-border-color: #ececec;
+    --highlight-bg-color: #f6f8fa;
+    --highlighter-rouge-color: #3f596f;
+    --highlight-lineno-color: #9e9e9e;
+    --inline-code-bg: rgb(25 25 28 / 5%);
+    --code-color: #3a3a3a;
+
+    --kbd-bg-color: white;
+    --kbd-text-color: var(--text-color);
+    --clipboard-checked-color: #43c743;
+
+    --prompt-text-color: rgb(46 46 46 / 77%);
+    --prompt-tip-bg: rgb(123 247 144 / 20%);
+    --prompt-tip-icon-color: #03b303;
+    --prompt-info-bg: #e1f5fe;
+    --prompt-info-icon-color: #0070cb;
+    --prompt-warning-bg: rgb(255 243 205);
+    --prompt-warning-icon-color: #ef9c03;
+    --prompt-danger-bg: rgb(248 215 218 / 56%);
+    --prompt-danger-icon-color: #df3c30;
+
+    /* (If your theme uses these) */
+    --img-bg: radial-gradient(circle, rgb(255 255 255) 0%, rgb(239 239 239) 100%);
+    --shimmer-bg: linear-gradient(
+      90deg,
+      rgb(250 250 250 / 0%) 0%,
+      rgb(232 230 230 / 100%) 50%,
+      rgb(250 250 250 / 0%) 100%
+    );
+    --checkbox-color: #c5c5c5;
+    --checkbox-checked-color: #07a8f7;
+    --tb-odd-bg: #fbfcfd;
+    --tb-border-color: #eaeaea;
   }
 
-  &[data-mode='dark'] {
-    /* Framework/background vars (must exist in your inspector) */
+  &[data-bs-theme='dark'] {
     --main-bg: rgb(27 27 30);
     --mask-bg: rgb(68 69 70);
     --main-border-color: rgb(44 45 45);
 
-    /* Menu */
+    --text-color: rgb(175 176 177);
+    --text-muted-color: #868686;
+    --heading-color: #cccccc;
+    --label-color: #a7a7a7;
+    --blockquote-border-color: rgb(66 66 66);
+    --blockquote-text-color: #868686;
+
+    --link-color: rgb(138 180 248);
+    --link-underline-color: rgb(82 108 150);
+
+    --button-bg: #1e1e1e;
+    --btn-border-color: #2e2f31;
+    --btn-backtotop-color: var(--text-color);
+    --btn-backtotop-border-color: #212122;
+
     --menu-bg: rgb(30 30 30);
     --menu-border-color: rgb(77 77 77 / 60%);
     --menu-shadow-color: rgb(4 4 4 / 42%);
-
-    /* Existing ones you already had */
-    --text-color: rgb(175 176 177);
-    --link-color: rgb(138 180 248);
-    --btn-border-color: #2e2f31;
+    --menu-active-color: rgb(240 248 255 / 63%);
+    --menu-highlight-bg: rgb(90 91 92 / 12%);
 
     --sidebar-bg: #1e1e1e;
     --sidebar-border-color: #292929;
@@ -75,26 +136,73 @@ html {
     --sidebar-hover-bg: #262626;
     --sidebar-btn-bg: #232328;
     --sidebar-btn-color: #787878;
+    --avatar-border-color: rgb(206 206 206 / 90%);
 
     --topbar-bg: rgb(27 27 30 / 64%);
     --topbar-text-color: var(--text-color);
-    --input-focus-border-color: rgb(112 114 115);
     --search-border-color: rgb(55 55 55);
+    --input-focus-border-color: rgb(112 114 115);
 
     --toc-highlight: rgb(116 178 243);
+    --toc-popup-border-color: #373737;
+
     --card-bg: #1e1e1e;
     --card-hover-bg: #464d51;
+    --card-shadow:
+      rgb(21 21 21 / 72%) 0 6px 18px 0,
+      rgb(137 135 135 / 24%) 0 0 0 1px;
 
     --tag-border: rgb(59 79 88);
     --tag-shadow: rgb(32 33 33);
-    --tag-hover: rgb(43 56 62);
+    --dash-color: rgb(63 65 68);
     --search-tag-bg: #292828;
+    --tag-hover: rgb(43 56 62);
 
-    --button-bg: #1e1e1e;
-    --menu-active-color: rgb(240 248 255 / 63%);
+    --categories-border: rgb(64 66 69 / 50%);
+    --categories-hover-bg: rgb(73 75 76);
+    --categories-icon-hover-color: white;
 
-    /* (Optional but commonly needed) */
-    --avatar-border-color: rgb(206 206 206 / 90%);
-    --menu-highlight-bg: rgb(90 91 92 / 12%);
+    --timeline-node-bg: rgb(150 152 156);
+    --timeline-color: rgb(63 65 68);
+    --timeline-year-dot-color: var(--timeline-color);
+
+    --language-border-color: #2d2d2d;
+    --highlight-bg-color: #151515;
+    --highlighter-rouge-color: #c9def1;
+    --highlight-lineno-color: #808080;
+    --inline-code-bg: rgb(255 255 255 / 5%);
+    --code-color: #b0b0b0;
+    --code-header-text-color: #6a6a6a;
+    --code-header-muted-color: #353535;
+    --code-header-icon-color: #565656;
+    --clipboard-checked-color: #2bcc2b;
+
+    --kbd-wrap-color: #6a6a6a;
+    --kbd-text-color: #d3d3d3;
+    --kbd-bg-color: #242424;
+
+    --prompt-text-color: rgb(216 212 212 / 75%);
+    --prompt-tip-bg: rgb(22 60 36 / 64%);
+    --prompt-tip-icon-color: rgb(15 164 15 / 81%);
+    --prompt-info-bg: rgb(7 59 104 / 80%);
+    --prompt-info-icon-color: #0075d1;
+    --prompt-warning-bg: rgb(90 69 3 / 88%);
+    --prompt-warning-icon-color: rgb(255 165 0 / 80%);
+    --prompt-danger-bg: rgb(86 28 8 / 80%);
+    --prompt-danger-icon-color: #cd0202;
+
+    --img-bg: radial-gradient(circle, rgb(22 22 24) 0%, rgb(32 32 32) 100%);
+    --shimmer-bg: linear-gradient(
+      90deg,
+      rgb(255 255 255 / 0%) 0%,
+      rgb(58 55 55 / 40%) 50%,
+      rgb(255 255 255 / 0%) 100%
+    );
+    --checkbox-color: rgb(118 120 121);
+    --checkbox-checked-color: var(--link-color);
+    --tb-odd-bg: #252526;
+    --tb-even-bg: rgb(31 31 34);
+    --tb-border-color: var(--tb-odd-bg);
+    --btn-paginator-hover-color: #2e2e2e;
   }
 }

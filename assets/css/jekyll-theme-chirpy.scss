@@ -3,39 +3,80 @@
 
 @import 'main{% if jekyll.environment == "production" %}.bundle{% endif %}';
 
+/* Put overrides at the very end of the file */
+
 html {
   &[data-mode='light'], &:not([data-mode]) {
-    --sidebar-bg: #d8bcf7;
-    --sidebar-border-color: #b18fe8;
-    --sidebar-text-color: #2b143d;
+    /* Common */
+    --text-color: #2b143d;
+    --link-color: #b83280;
+    --btn-border-color: #d8aee1;
 
-    --nav-link-color: #9e81b3;
-    --nav-hover-color: #b83280;
-    --nav-cursor-color: #9e81b3;
+    /* Sidebar */
+    --sidebar-bg: #f7e8f5;
+    --sidebar-border-color: #e7d4f0;
+    --sidebar-muted-color: #6f557c;
+    --sidebar-active-color: #2b143d;
+    --sidebar-hover-bg: #e9dbf4;
+    --sidebar-btn-bg: #ffffff;
+    --sidebar-btn-color: #7a6a86;
 
-    --tag-bg: #f0e6ff;
-    --tag-text-color: #5b2a87;
-    --tag-hover: #9eb556;
+    /* Topbar / Search */
+    --topbar-bg: rgb(247 232 245 / 70%);
+    --topbar-text-color: #2b143d;
+    --input-focus-border-color: #b83280;
 
-    --link-color: #9e81b3;
-    --btn-border-color: #b18fe8;
+    /* Posts / cards */
+    --toc-highlight: #b83280;
+    --card-bg: #ffffff;
+    --card-hover-bg: #f0e6ff;
+
+    /* Tags */
+    --tag-border: #d8aee1;
+    --tag-shadow: #d8aee1;
+    --tag-hover: #e9dbf4;
+    --search-tag-bg: #f8f0ff;
+
+    /* Buttons / UI bits (optional but usually needed) */
+    --button-bg: #ffffff;
+    --menu-active-color: #b83280;
   }
 
   &[data-mode='dark'] {
-    --sidebar-bg: #2b163d;
-    --sidebar-border-color: #40235e;
-    --sidebar-text-color: #eadcff;
-
-    --nav-link-color: #d8bcf7;
-    --nav-hover-color: #e0aaff;
-    --nav-cursor-color: #d8bcf7;
-
-    --tag-bg: #3a2456;
-    --tag-text-color: #eadcff;
-    --tag-hover: #8b8a4b;
-
+    /* Common */
+    --text-color: #eadcff;
     --link-color: #d8bcf7;
     --btn-border-color: #40235e;
+
+    /* Sidebar */
+    --sidebar-bg: #2b163d;
+    --sidebar-border-color: #40235e;
+    --sidebar-muted-color: #bfaad3;
+    --sidebar-active-color: #ffffff;
+    --sidebar-hover-bg: #3a2456;
+    --sidebar-btn-bg: #232328;
+    --sidebar-btn-color: #cbbfe0;
+    --avatar-border-color: rgb(206 206 206 / 90%);
+
+    /* Topbar / Search */
+    --topbar-bg: rgb(43 22 61 / 64%);
+    --topbar-text-color: var(--text-color);
+    --input-focus-border-color: #d8bcf7;
+    --search-border-color: rgb(77 77 77 / 60%);
+
+    /* Posts / cards */
+    --toc-highlight: #d8bcf7;
+    --card-bg: #2b163d;
+    --card-hover-bg: #3a2456;
+
+    /* Tags */
+    --tag-border: #40235e;
+    --tag-shadow: #40235e;
+    --tag-hover: #3a2456;
+    --search-tag-bg: #292828;
+
+    /* Buttons / UI bits (optional but usually needed) */
+    --button-bg: #1e1e1e;
+    --menu-active-color: #d8bcf7;
   }
 }
-html { --sidebar-bg: #4a632b !important; }

@@ -1,6 +1,5 @@
 ---
 ---
-
 @import 'main{% if jekyll.environment == "production" %}.bundle{% endif %}';
 
 /* Put overrides at the very end of the file */

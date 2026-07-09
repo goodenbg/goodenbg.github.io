@@ -80,3 +80,69 @@ html {
     --menu-active-color: #d8bcf7;
   }
 }
+html {
+  &[data-mode='light'],
+  &:not([data-mode]) {
+    /* put ONLY your LIGHT variable overrides here (copy your existing light values) */
+    --sidebar-bg: #f7e8f5;
+    --sidebar-border-color: #e7d4f0;
+    --sidebar-muted-color: #6f557c;
+    --sidebar-active-color: #2b143d;
+    --sidebar-hover-bg: #e9dbf4;
+    --sidebar-btn-bg: #ffffff;
+    --sidebar-btn-color: #7a6a86;
+
+    --text-color: #2b143d;
+    --link-color: #b83280;
+    --btn-border-color: #d8aee1;
+
+    --topbar-bg: rgb(247 232 245 / 70%);
+    --topbar-text-color: #2b143d;
+    --input-focus-border-color: #b83280;
+
+    --toc-highlight: #b83280;
+    --card-bg: #ffffff;
+    --card-hover-bg: #f0e6ff;
+
+    --tag-border: #d8aee1;
+    --tag-shadow: #d8aee1;
+    --tag-hover: #e9dbf4;
+    --search-tag-bg: #f8f0ff;
+
+    --button-bg: #ffffff;
+    --menu-active-color: #b83280;
+  }
+
+  &[data-mode='dark'] {
+    /* put ONLY your DARK variable overrides here (copy your existing dark values) */
+    --text-color: #eadcff;
+    --link-color: #d8bcf7;
+    --btn-border-color: #40235e;
+
+    --sidebar-bg: #2b163d;
+    --sidebar-border-color: #40235e;
+    --sidebar-muted-color: #bfaad3;
+    --sidebar-active-color: #ffffff;
+    --sidebar-hover-bg: #3a2456;
+    --sidebar-btn-bg: #232328;
+    --sidebar-btn-color: #cbbfe0;
+    --avatar-border-color: rgb(206 206 206 / 90%);
+
+    --topbar-bg: rgb(43 22 61 / 64%);
+    --topbar-text-color: var(--text-color);
+    --input-focus-border-color: #d8bcf7;
+    --search-border-color: rgb(77 77 77 / 60%);
+
+    --toc-highlight: #d8bcf7;
+    --card-bg: #2b163d;
+    --card-hover-bg: #3a2456;
+
+    --tag-border: #40235e;
+    --tag-shadow: #40235e;
+    --tag-hover: #3a2456;
+    --search-tag-bg: #292828;
+
+    --button-bg: #1e1e1e;
+    --menu-active-color: #d8bcf7;
+  }
+}

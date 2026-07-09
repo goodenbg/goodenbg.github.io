@@ -202,6 +202,15 @@
 }
 
 :root[data-bs-theme='dark'] {
+ --text-color: #646853;
+--text-muted-color: #9b8a4d;
+--heading-color: #9e7b3d;
+--label-color: #9e7b3d;
+--blockquote-text-color: #9b8a4d;
+--prompt-text-color: rgba(100, 104, 83, 0.95);
+
+/* at the end */
+:root[data-bs-theme='dark'] {
+  --bs-body-color: #d8cbf7; /* keep main text readable */
   --bs-body-bg: #646853;
-  --bs-body-color: #d8cbf7;
 }
